@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <style>
+        .gourmetLogo {
+            height: 60px;
+        }
+
+        .bannerSectionOurRecipe {
+            background-position: center;
+            background-image: url("https://cf-store.widencdn.net/mccormick/c/0/7/c07dcccb-db2e-4b63-94fa-c50af9bbc270.jpg?response-content-disposition=inline%3B%20filename%3D%22recipe_lander_4.jpg%22&Expires=1656067590&Signature=DKc~gORfAvLu7Hxg8BOEfogrzaZHV9lmCli1IkLVwkKvI1l6luvx57XpF7d3Ctu498crqr5E2i~mFieFM2rZXB8ez9qn5PMWL~mXjhbTlk4zADWCgCIOUwew6JCQtNUd7Nl7YfvcE-XkiuY1i1uVjsAEdGRLAIs1k77x9gIoXeOWGW14KTuZKPnQDQcgR61tTcVUt2KgA0bpnaBB56aYRXHrVMnYujLBtqCWAyb5Jzc-UEWjd3IXRKCtfrgthv0xCC8uuQs8ymxjOHzWnw1Bgu7avxxSXRA4egrAKQU9k8OV6K51QxBl0BDm1xkfIgyJOg0x6ePT5D6HSERcFFfhCA__&Key-Pair-Id=APKAJD5XONOBVWWOA65A");
+            background-size: cover;
+            height: 80vh;
+        }
+
+        .bannerSectionOurStory {
+            background-position: center;
+            background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
+            background-size: cover;
+            height: 80vh;
+        }
+        .bannerSectionOurProduct{
+            background-position: center;
+            background-image: url("https://d1e3z2jco40k3v.cloudfront.net/-/media/project/oneweb/gg21/gg2021-products/gourmet-garden-profuct-family-us-v2.jpg?rev=4784db7c80f646ffb1fafc9ea7b14dcb&vd=20210522T044612Z&extension=webp&hash=3E6FDA4C5719C17CA884FDFBC6A816D6");
+            background-size: cover;
+            height: 80vh;
+        }
+
+        .cardSize {
+            background-size: cover;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .menu-item-card1 {
+            background-image: url("Appetizers.jpg");
+        }
+
+        .menu-item-card2 {
+            background-image: url("Salads.jpg");
+        }
+
+        .menu-item-card3 {
+            background-image: url("SoupsandStews.jpg");
+        }
+
+        .menu-item-card4 {
+            background-image: url("Entrees.jpg");
+        }
+
+        .menu-item-card5 {
+            background-image: url("Pasta.jpg");
+        }
+
+        .menu-item-card6 {
+            background-image: url("Drinks & Smoothies.jpg");
+        }
+
+        .menu-item-card7 {
+            background-image: url("Side Dishes.jpg");
+        }
+
+        .menu-item-card8 {
+            background-image: url("Desserts.jpg");
+        }
+
+        .menu-card-title {
+            padding-top: 15px;
+            padding-left: 20px;
+            font-size: 30px;
+        }
+
+        .title-bg {
+            background: rgba(0, 0, 0, .6);
+            width: 700px;
+            height: 150px;
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        .ourImageLogo {
+            height: 400px;
+        }
+
+        .farmSectionBg {
+            background-color: rgb(134, 128, 120);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sectionrecipes">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <a class="navbar-brand " href="#"><img class="gourmetLogo" src="logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionrecipes')" href="#">Recipes </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionourstory')" href="#">
+                            Our Story
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionOurProducts')" href="#">
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectioncontactus')" href="#">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="bannerSectionOurRecipe text-center d-flex flex-row justify-content-center " id="topsection">
+                <div class="text-center title-bg">
+                    <h1 class="text-white mb-3">Our Recipes</h1>
+                    <p class="text-white mb-4">A fresh take on favorite dishes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Discover Recipes</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card1 mb-3">
+                            <h1 class="menu-card-title text-white">Appetizers</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card2 mb-3">
+                            <h1 class="menu-card-title text-white">Salads</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card3 mb-3">
+                            <h1 class="menu-card-title text-white">Soups and Stews</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card4 mb-3">
+                            <h1 class="menu-card-title text-white">Entrees</h1>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card5 mb-3">
+                            <h1 class="menu-card-title text-white">Pasta</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card6 mb-3">
+                            <h1 class="menu-card-title text-white">Drinks & Smoothies</h1>
+                        </div>
+                    </div> 
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card7 mb-3">
+                            <h1 class="menu-card-title text-white">Side Dishes</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow cardSize menu-item-card8 mb-3">
+                            <h1 class="menu-card-title text-white">Desserts</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <h1>Our story</h1>
+                    </div>
+                    <div class="col-4">
+                        <h1>Products</h1>
+                        <p onclick="display('sectioncontactus')">Contact us</p>
+                    </div>
+                    <div class="col-4">
+                        <h1>Recipes</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionourstory">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <a class="navbar-brand " href="#"><img class="gourmetLogo" src="logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionrecipes')" href="#">Recipes </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionourstory')" href="#">
+                            Our Story
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionOurProducts')" href="#">
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectioncontactus')" href="#">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="bannerSectionOurStory text-center d-flex flex-row justify-content-center" id="topsection">
+            <div class="text-center title-bg">
+                <h1 class="text-white mb-1">Our Story</h1>
+                <p class="text-white text-center mb-1">Gourmet Garden loves herbs and spices, we strive to<br>
+                    make your everyday cooking easier and more <br>
+                    enjoyable.</p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="mt-5 d-flex flex-row farmSectionBg">
+                <div class="p-5">
+                    <h1>
+                        THE FARM-TO-PLATE STORY
+                    </h1>
+                    <p>Your herbs start their life as a little seed on broad acre farms in Queensland and Victoria.
+                        The herbs are cared for, fed and grown organically by our dedicated group of farmers who
+                        are truly passionate about producing fresh herbs that are brimming with essential oils,
+                        which is the key to unlocking the flavor, aroma and color of herbs. Years of research and
+                        work has been invested into finding the optimum conditions and care for each variety of herb.
+                    </p>
+                    <div>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+                <div>
+                    <img class="ourImageLogo"
+                        src="https://mccormick.widen.net/content/1xdalhvtee/original/GG-Farm-to-Plate-Shoot-02_WEB_220x220.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="mt-5 d-flex flex-row ">
+                <div>
+                    <img class="ourImageLogo"
+                        src="https://cf-store.widencdn.net/mccormick/2/7/1/271b4196-19b1-4230-8014-bda6fa7ac80e.jpg?response-content-disposition=inline%3B%20filename%3D%22farm-kids.jpg%22&Expires=1656075773&Signature=OTSXNMYSstPC5BVoQpc5sLk3N9MSxYTp5gzicPAKxUiR70Tq17X3qA2sOCfQM9ZuguTGiKT7kyVXyTpA74Psqf~bGw45eEzKe0X4RPh19KNKoEZfWhflRm3VAE10H3VPZWJzeBtVD~4vULwAiOOsoOkxkOqEMDPQaEOVd9NrU2RXX9RvNTjgjqr8y745rCWyYkdTrs4ZVoK8mvYVunCLyeEGy~VWMlvq3QYi40cSjEaHXFfivqZ~Rfzm-yRkp4Km934JD0EH3dNsyEquwHT~Rr7qgoj8E91Dd2ISJsABFxBxIzH0jMTJ0WvvhLv~pqBQ2WjObFHiWicAi3PgDvTRTg__&Key-Pair-Id=APKAJD5XONOBVWWOA65A">
+                </div>
+                <div class="p-5">
+                    <h1>
+                        OUR HISTORY
+                    </h1>
+                    <p>Two Australian scientists (and brothers) frustrated with the short life of culinary herbs develop
+                        the
+                        ‘Eva Fresh’ technology which extends the shelf life of fresh herbs, without the need of cooking
+                        or
+                        heating. The technology is eventually bought by Berri, a fruit juice manufacturer.
+                    <div>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="mt-5 d-flex flex-row farmSectionBg">
+                <div class="p-5">
+                    <h1>
+                        SUSTAINABILITY
+                    </h1>
+                    <p>Consideration for the environment has been very important to Gourmet Garden and this is reflected
+                        in the design of the company’s headquarter building built in 2006, which houses the factory,
+                        laboratories and offices.
+                    </p>
+                    <div>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+                <div>
+                    <img class="ourImageLogo"
+                        src="https://cf-store.widencdn.net/mccormick/a/1/5/a152efa0-ecd6-4a99-9a1e-6ce6fa4aec4a.jpg?response-content-disposition=inline%3B%20filename%3D%22GG-Farm-to-Plate-Shoot-31_WEB_220x220.jpg%22&Expires=1656075773&Signature=QxPoV9KaPJqjX78NqE7coSrbLtSFLMAZ-1LRsyCCLKPSU16QnCqDZLq3MJeaNazsAFmpbpLPs~7gG~hdSW5pjKDzYCT55-25pnWUEnEIPjcVaDYPgLIo2LzPy6P-kWhj4KxQI19FDzkAX50WNzybhzmEZEnKYZ2bMimITerc3hSg1O-TOnn~4mPZeICJ6pHadGNH4oggLW386HUWcD2-20y8kITJIkiCqMQUNbUoBuxr~HSXj8Eb6O0RPPchiAD8FRvUCvtYW6ako9zuno79rUpSg7XMfnrqEAuLJFvd2zSGB1quVbt9CfubERSylEfyIKNfJ3UY5TfQr6jdYYK71A__&Key-Pair-Id=APKAJD5XONOBVWWOA65A">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectioncontactus">
+        <div class="container">
+            <section class="mb-4">
+                <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+                <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to
+                    contact us directly. Our team will come back to you within
+                    a matter of hours to help you.</p>
+                <div class="row">
+                    <div class="col-md-9 mb-md-0 mb-5">
+                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="name" class="form-control">
+                                        <label for="name" class="">Your name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="email" name="email" class="form-control">
+                                        <label for="email" class="">Your email</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="subject" name="subject" class="form-control">
+                                        <label for="subject" class="">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form">
+                                        <textarea type="text" id="message" name="message" rows="2"
+                                            class="form-control md-textarea"></textarea>
+                                        <label for="message">Your messag</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="text-center text-md-left">
+                            <a class="btn btn-primary"
+                                onclick="document.getElementById('contact-form').submit();">Send</a>
+                        </div>
+                        <div class="status"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="sectionOurProducts">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <a class="navbar-brand " href="#"><img class="gourmetLogo" src="logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionrecipes')" href="#">Recipes </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionourstory')" href="#">
+                            Our Story
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectionOurProducts')" href="#">
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="display('sectioncontactus')" href="#">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="bannerSectionOurProduct text-center d-flex flex-row justify-content-center" id="topsection">
+            <div class="text-center title-bg">
+                <h1 class="text-white mb-1">Our Products</h1>
+                <p class="text-white text-center mb-1">Discover lightly dried herbs and pastes bursting with 
+                    flavor for everyday meal inspiration. <br>
+                    enjoyable.</p>
+            </div>
+        </div>
+        
+    </div>
+    <script type="text/javascript"
+        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
