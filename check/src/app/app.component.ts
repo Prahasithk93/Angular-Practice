@@ -5,9 +5,9 @@ import { reduce } from 'rxjs';
   selector: 'app-root',
   template:`
   <h2 >hello {{name}}</h2>
-  <button (click)="onClick($event)">click me</button>
-  <button (click)="greeting='welcome prahasith'">click me</button>
-  {{greeting}}
+  <input #input type="text">
+  <button (click)="message(input.value)">click me</button>
+  {{input.value}}
   ` ,
   styles: [`
 
@@ -15,13 +15,12 @@ import { reduce } from 'rxjs';
 })
 export class AppComponent {
   public name="prahasith";
-  public greeting="";
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-  onClick(event:any){
-    console.log(event.type);
-    this.greeting="good luck";
-  };
+  message(value:any){
+    console.log(value);
+  }
 }
