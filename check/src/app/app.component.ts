@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { reduce } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   template:`
-  <h2 [style.color]="'red'">hello {{name}}</h2>
-  <h2 [style.color]="isError?'green':'blue'">hello {{name}}</h2>
-  <h2 [style.color]="textColor">hello {{name}}</h2>
-  <h2 [ngStyle]="titleStyle">hello {{name}}</h2>
+  <h2 >hello {{name}}</h2>
+  <button (click)="onClick($event)">click me</button>
+  <button (click)="greeting='welcome prahasith'">click me</button>
+  {{greeting}}
   ` ,
   styles: [`
 
@@ -15,10 +15,13 @@ import { reduce } from 'rxjs';
 })
 export class AppComponent {
   public name="prahasith";
-  public isError=false;
-  public textColor="orange";
-  public titleStyle={
-      color: "blue",
-      fontStyle:"italic"
+  public greeting="";
+  constructor() { }
+
+  ngOnInit(): void {
   }
+  onClick(event:any){
+    console.log(event.type);
+    this.greeting="good luck";
+  };
 }
