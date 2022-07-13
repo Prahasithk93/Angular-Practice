@@ -2,20 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-angular',
-  template: `<h2 *ngIf="name;else elseError">hello  prahasith</h2>
-  <ng-template #elseError><h2>good morning</h2></ng-template>
-  <div *ngIf="name; then thenB; else elseB"; ></div>
-  <ng-template #thenB>
-    <h2>code Evolution</h2>
-  </ng-template>
-  <ng-template #elseB>
-    <h2>Hidden</h2>
-  </ng-template>
+  template: `
+    <div [ngSwitch]="number">
+      <div *ngSwitchCase="'1'">number selected one</div>
+      <div *ngSwitchCase="'2'">number selected two</div>
+      <div *ngSwitchCase="'3'">number selected three</div>
+      <div *ngSwitchDefault>no number selected</div>
+    </div>
   `,
   styleUrls: ['./angular.component.css']
 })
 export class AngularComponent implements OnInit {
-public name=false
+public number=2;
   constructor() { }
 
   ngOnInit(): void {
