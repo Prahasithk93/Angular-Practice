@@ -10,6 +10,7 @@ import { reduce } from 'rxjs';
 export class AppComponent {
   public name="prahasith";
   title = 'project';
+  public message="";
   constructor() { }
 
   ngOnInit(): void {
