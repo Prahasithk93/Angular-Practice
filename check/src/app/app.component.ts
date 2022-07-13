@@ -8,9 +8,9 @@ import { reduce } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public name="prahasith";
+ 
   title = 'project';
-  public message="";
+  
   constructor() { }
 
   ngOnInit(): void {
