@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { reduce } from 'rxjs';
 
 
@@ -10,11 +10,20 @@ import { reduce } from 'rxjs';
 export class AppComponent {
  
   title = 'project';
-  
+  public message="";
+  public btn1="bg-primary";
+  public btn2="bg-warning";
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  display(event: any){
+    console.log(event);
+    this.message = event;
+  }
+  
  
 }
 // import { Component } from '@angular/core';
