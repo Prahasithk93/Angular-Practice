@@ -13,6 +13,10 @@ export class AppComponent {
   public message="";
   public btn1="bg-primary";
   public btn2="bg-warning";
+  public btnColors={
+    btnP:"bg-primary",
+    btnS:"bg-secondary"
+  }
 
   constructor() { }
 

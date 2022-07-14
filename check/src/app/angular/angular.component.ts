@@ -9,7 +9,7 @@ export class AngularComponent implements OnInit {
   public name="prahasith";
   @Input() btn1: any;
   @Input() btn2: any;
- 
+  @Input() btnColors: any;
   @Output() public childEvent=new EventEmitter(); 
   constructor() { }
 
