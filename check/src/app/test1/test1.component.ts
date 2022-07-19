@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <input type="text" value="prahasith">
   <h1>{{"hello "+greet}}</h1>
   <h1>{{greetUser()}}</h1>
+  <button routerLink="" routerLinkActive="active">back</button>
   `,
   styleUrls: []
 })

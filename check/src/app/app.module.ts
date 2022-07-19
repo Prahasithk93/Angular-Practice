@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { AngularComponent } from './angular/angular.component';
 import { Test1Component } from './test1/test1.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     AngularComponent,
-    Test1Component
+    Test1Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
